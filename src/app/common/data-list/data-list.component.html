@@ -9,7 +9,10 @@
 </div>
 <div class="row">
   <div class="col-12 mt-1 data-list-row">
-    <app-data-row *ngFor="let row of dataList" [dataRow]="row" (selectClick)="onSelectClick($event)" (updateClick)="onUpdateClick($event)" (deleteClick)="onDeleteClick($event)">
+    <!--     <app-data-row *ngFor="let row of dataList | filter:phraseString:'name'" [dataRow]="row" (selectClick)="onSelectClick($event)" (updateClick)="onUpdateClick($event)" (deleteClick)="onDeleteClick($event)">
+ -->
+    <app-data-row *ngFor="let row of dataList" [dataRow]="row" (selectClick)="onSelectClick($event)"
+      (updateClick)="onUpdateClick($event)" (deleteClick)="onDeleteClick($event)">
     </app-data-row>>
   </div>
 </div>

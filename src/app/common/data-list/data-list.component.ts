@@ -9,6 +9,8 @@ import { User } from 'src/app/model/user';
 export class DataListComponent implements OnInit {
 
   @Input() dataList: User[]=[];
+  //@Input() phraseString: string='';
+
 
   @Output() selectClick: EventEmitter<User> = new EventEmitter();
   @Output() updateClick: EventEmitter<User> = new EventEmitter();
@@ -28,7 +30,11 @@ export class DataListComponent implements OnInit {
   onDeleteClick(dataRow: User):void {
     this.deleteClick.emit(dataRow);
   }
-
+/*   columnKey: string = '';
+  onColumnSelect(key: string):void {
+    this.columnKey = key;
+  }
+ */
 
 
 }
